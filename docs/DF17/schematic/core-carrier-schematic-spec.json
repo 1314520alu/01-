@@ -1,0 +1,1209 @@
+{
+  "project": "01飞控",
+  "viewConvention": "Core 资料为飞控 Bottom View（上=80DS，下=80DP，Pin1 左上）。载板原理图/PCB 为 Top View 镜像：同物理边对应 Core 资料，载板用相反公母（+Y=80DP 接 Core80DS，−Y=80DS 接 Core80DP），符号 rotation=180 + mirror=true。",
+  "page": {
+    "name": "Core_Carrier",
+    "title": "X9 Core 载板 — 双 DF17 80P",
+    "note": "载板侧连接器需镜像反向（零一官方说明）。本页仅 Core 对接座，不含外设。"
+  },
+  "connectors": [
+    {
+      "designator": "J1",
+      "part_number": "DF17(1.0H)-80DP-0.5V(57)",
+      "name": "MATE_CORE_80DS",
+      "position": "+Y",
+      "core_ref": "80DS",
+      "core_doc_position": "top",
+      "mates_core": "80DS",
+      "schematic_x": 80,
+      "schematic_y": 60,
+      "rotation": 180,
+      "mirror": true,
+      "pins": [
+        {
+          "pin": 1,
+          "net": "CTS_TELEM3",
+          "category": "UART TELEM3",
+          "row": "top",
+          "row_pos": 1
+        },
+        {
+          "pin": 2,
+          "net": "RTS_TELEM3",
+          "category": "UART TELEM3",
+          "row": "top",
+          "row_pos": 2
+        },
+        {
+          "pin": 3,
+          "net": "RX_TELEM3",
+          "category": "UART TELEM3",
+          "row": "top",
+          "row_pos": 3
+        },
+        {
+          "pin": 4,
+          "net": "TX_TELEM3",
+          "category": "UART TELEM3",
+          "row": "top",
+          "row_pos": 4
+        },
+        {
+          "pin": 5,
+          "net": "CTS_TELEM2",
+          "category": "UART TELEM2",
+          "row": "top",
+          "row_pos": 5
+        },
+        {
+          "pin": 6,
+          "net": "RTS_TELEM2",
+          "category": "UART TELEM2",
+          "row": "top",
+          "row_pos": 6
+        },
+        {
+          "pin": 7,
+          "net": "RX_TELEM2",
+          "category": "UART TELEM2",
+          "row": "top",
+          "row_pos": 7
+        },
+        {
+          "pin": 8,
+          "net": "TX_TELEM2",
+          "category": "UART TELEM2",
+          "row": "top",
+          "row_pos": 8
+        },
+        {
+          "pin": 9,
+          "net": "CTS_TELEM1",
+          "category": "UART TELEM1",
+          "row": "top",
+          "row_pos": 9
+        },
+        {
+          "pin": 10,
+          "net": "RTS_TELEM1",
+          "category": "UART TELEM1",
+          "row": "top",
+          "row_pos": 10
+        },
+        {
+          "pin": 11,
+          "net": "RX_TELEM1",
+          "category": "UART TELEM1",
+          "row": "top",
+          "row_pos": 11
+        },
+        {
+          "pin": 12,
+          "net": "TX_TELEM1",
+          "category": "UART TELEM1",
+          "row": "top",
+          "row_pos": 12
+        },
+        {
+          "pin": 13,
+          "net": "RX_GPS2",
+          "category": "UART GPS2",
+          "row": "top",
+          "row_pos": 13
+        },
+        {
+          "pin": 14,
+          "net": "TX_GPS2",
+          "category": "UART GPS2",
+          "row": "top",
+          "row_pos": 14
+        },
+        {
+          "pin": 15,
+          "net": "RX_GPS1",
+          "category": "UART GPS1",
+          "row": "top",
+          "row_pos": 15
+        },
+        {
+          "pin": 16,
+          "net": "TX_GPS1",
+          "category": "UART GPS1",
+          "row": "top",
+          "row_pos": 16
+        },
+        {
+          "pin": 17,
+          "net": "RX_EXT2",
+          "category": "UART EXT2",
+          "row": "top",
+          "row_pos": 17
+        },
+        {
+          "pin": 18,
+          "net": "TX_EXT2",
+          "category": "UART EXT2",
+          "row": "top",
+          "row_pos": 18
+        },
+        {
+          "pin": 19,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 19
+        },
+        {
+          "pin": 20,
+          "net": "VDD_5V_IN",
+          "category": "电源",
+          "row": "top",
+          "row_pos": 20
+        },
+        {
+          "pin": 21,
+          "net": "VDD_5V_IN",
+          "category": "电源",
+          "row": "top",
+          "row_pos": 21
+        },
+        {
+          "pin": 22,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 22
+        },
+        {
+          "pin": 23,
+          "net": "VDD_3V3_OUT",
+          "category": "电源",
+          "row": "top",
+          "row_pos": 23
+        },
+        {
+          "pin": 24,
+          "net": "VDD_3V3_OUT",
+          "category": "电源",
+          "row": "top",
+          "row_pos": 24
+        },
+        {
+          "pin": 25,
+          "net": "USART3_TX_DEBUG",
+          "category": "调试串口",
+          "row": "top",
+          "row_pos": 25
+        },
+        {
+          "pin": 26,
+          "net": "USART3_RX_DEBUG_P",
+          "category": "调试串口",
+          "row": "top",
+          "row_pos": 26
+        },
+        {
+          "pin": 27,
+          "net": "FMU_SWDIO",
+          "category": "SWD",
+          "row": "top",
+          "row_pos": 27
+        },
+        {
+          "pin": 28,
+          "net": "FMU_SWCLK",
+          "category": "SWD",
+          "row": "top",
+          "row_pos": 28
+        },
+        {
+          "pin": 29,
+          "net": "FMU_nRST",
+          "category": "FMU",
+          "row": "top",
+          "row_pos": 29
+        },
+        {
+          "pin": 30,
+          "net": "PD15(PH11)",
+          "category": "GPIO",
+          "row": "top",
+          "row_pos": 30
+        },
+        {
+          "pin": 31,
+          "net": "NFC_GPIO",
+          "category": "GPIO",
+          "row": "top",
+          "row_pos": 31
+        },
+        {
+          "pin": 32,
+          "net": "GND",
+          "category": "地",
+          "row": "top",
+          "row_pos": 32
+        },
+        {
+          "pin": 33,
+          "net": "FMU_CH1_PROT",
+          "category": "PWM",
+          "row": "top",
+          "row_pos": 33
+        },
+        {
+          "pin": 34,
+          "net": "FMU_CH2_PROT",
+          "category": "PWM",
+          "row": "top",
+          "row_pos": 34
+        },
+        {
+          "pin": 35,
+          "net": "FMU_CH3_PROT",
+          "category": "PWM",
+          "row": "top",
+          "row_pos": 35
+        },
+        {
+          "pin": 36,
+          "net": "FMU_CH4_PROT",
+          "category": "PWM",
+          "row": "top",
+          "row_pos": 36
+        },
+        {
+          "pin": 37,
+          "net": "FMU_CH5_PROT",
+          "category": "PWM",
+          "row": "top",
+          "row_pos": 37
+        },
+        {
+          "pin": 38,
+          "net": "FMU_CH6_PROT",
+          "category": "PWM",
+          "row": "top",
+          "row_pos": 38
+        },
+        {
+          "pin": 39,
+          "net": "FMU_CH7_PROT",
+          "category": "PWM",
+          "row": "top",
+          "row_pos": 39
+        },
+        {
+          "pin": 40,
+          "net": "FMU_CH8_PROT",
+          "category": "PWM",
+          "row": "top",
+          "row_pos": 40
+        },
+        {
+          "pin": 41,
+          "net": "NC",
+          "category": null,
+          "row": "bottom",
+          "row_pos": 40
+        },
+        {
+          "pin": 42,
+          "net": "NC",
+          "category": null,
+          "row": "bottom",
+          "row_pos": 39
+        },
+        {
+          "pin": 43,
+          "net": "NC",
+          "category": null,
+          "row": "bottom",
+          "row_pos": 38
+        },
+        {
+          "pin": 44,
+          "net": "NC",
+          "category": null,
+          "row": "bottom",
+          "row_pos": 37
+        },
+        {
+          "pin": 45,
+          "net": "NC",
+          "category": null,
+          "row": "bottom",
+          "row_pos": 36
+        },
+        {
+          "pin": 46,
+          "net": "NC",
+          "category": null,
+          "row": "bottom",
+          "row_pos": 35
+        },
+        {
+          "pin": 47,
+          "net": "NC",
+          "category": null,
+          "row": "bottom",
+          "row_pos": 34
+        },
+        {
+          "pin": 48,
+          "net": "NC",
+          "category": null,
+          "row": "bottom",
+          "row_pos": 33
+        },
+        {
+          "pin": 49,
+          "net": "GND",
+          "category": "地",
+          "row": "bottom",
+          "row_pos": 32
+        },
+        {
+          "pin": 50,
+          "net": "ETH_RD2_N",
+          "category": "以太网",
+          "row": "bottom",
+          "row_pos": 31
+        },
+        {
+          "pin": 51,
+          "net": "GND",
+          "category": "地",
+          "row": "bottom",
+          "row_pos": 30
+        },
+        {
+          "pin": 52,
+          "net": "ETH_RD2_P",
+          "category": "以太网",
+          "row": "bottom",
+          "row_pos": 29
+        },
+        {
+          "pin": 53,
+          "net": "GND",
+          "category": "地",
+          "row": "bottom",
+          "row_pos": 28
+        },
+        {
+          "pin": 54,
+          "net": "ETH_TD2_N",
+          "category": "以太网",
+          "row": "bottom",
+          "row_pos": 27
+        },
+        {
+          "pin": 55,
+          "net": "GND",
+          "category": "地",
+          "row": "bottom",
+          "row_pos": 26
+        },
+        {
+          "pin": 56,
+          "net": "ETH_TD2_P",
+          "category": "以太网",
+          "row": "bottom",
+          "row_pos": 25
+        },
+        {
+          "pin": 57,
+          "net": "GND",
+          "category": "地",
+          "row": "bottom",
+          "row_pos": 24
+        },
+        {
+          "pin": 58,
+          "net": "ETH_LED",
+          "category": "以太网",
+          "row": "bottom",
+          "row_pos": 23
+        },
+        {
+          "pin": 59,
+          "net": "GND",
+          "category": "地",
+          "row": "bottom",
+          "row_pos": 22
+        },
+        {
+          "pin": 60,
+          "net": "VDD_5V_IN",
+          "category": "电源",
+          "row": "bottom",
+          "row_pos": 21
+        },
+        {
+          "pin": 61,
+          "net": "VDD_5V_IN",
+          "category": "电源",
+          "row": "bottom",
+          "row_pos": 20
+        },
+        {
+          "pin": 62,
+          "net": "GND",
+          "category": "地",
+          "row": "bottom",
+          "row_pos": 19
+        },
+        {
+          "pin": 63,
+          "net": "RX_SBUS_INPUT_PORT",
+          "category": "RC",
+          "row": "bottom",
+          "row_pos": 18
+        },
+        {
+          "pin": 64,
+          "net": "SBUS_OUTPUT_PORT",
+          "category": "RC",
+          "row": "bottom",
+          "row_pos": 17
+        },
+        {
+          "pin": 65,
+          "net": "RSSI_IN_PORT",
+          "category": "RC",
+          "row": "bottom",
+          "row_pos": 16
+        },
+        {
+          "pin": 66,
+          "net": "PPM_IN_PORT",
+          "category": "RC",
+          "row": "bottom",
+          "row_pos": 15
+        },
+        {
+          "pin": 67,
+          "net": "VDD_5V_PERIPH_nEN",
+          "category": "电源控制",
+          "row": "bottom",
+          "row_pos": 14
+        },
+        {
+          "pin": 68,
+          "net": "VDD_5V_PERIPH_nOC",
+          "category": "电源控制",
+          "row": "bottom",
+          "row_pos": 13
+        },
+        {
+          "pin": 69,
+          "net": "VDD_5V_HIPOWER_nEN",
+          "category": "电源控制",
+          "row": "bottom",
+          "row_pos": 12
+        },
+        {
+          "pin": 70,
+          "net": "VDD_5V_HIPOWER_nOC",
+          "category": "电源控制",
+          "row": "bottom",
+          "row_pos": 11
+        },
+        {
+          "pin": 71,
+          "net": "NC",
+          "category": null,
+          "row": "bottom",
+          "row_pos": 10
+        },
+        {
+          "pin": 72,
+          "net": "GND",
+          "category": "地",
+          "row": "bottom",
+          "row_pos": 9
+        },
+        {
+          "pin": 73,
+          "net": "SAFETY_SW",
+          "category": "安全开关",
+          "row": "bottom",
+          "row_pos": 8
+        },
+        {
+          "pin": 74,
+          "net": "SAFETY_SW_LED",
+          "category": "安全开关",
+          "row": "bottom",
+          "row_pos": 7
+        },
+        {
+          "pin": 75,
+          "net": "BUZZ-",
+          "category": "蜂鸣器",
+          "row": "bottom",
+          "row_pos": 6
+        },
+        {
+          "pin": 76,
+          "net": "GND",
+          "category": "地",
+          "row": "bottom",
+          "row_pos": 5
+        },
+        {
+          "pin": 77,
+          "net": "USB_D_P",
+          "category": "USB",
+          "row": "bottom",
+          "row_pos": 4
+        },
+        {
+          "pin": 78,
+          "net": "USB_D_N",
+          "category": "USB",
+          "row": "bottom",
+          "row_pos": 3
+        },
+        {
+          "pin": 79,
+          "net": "VBUS",
+          "category": "USB",
+          "row": "bottom",
+          "row_pos": 2
+        },
+        {
+          "pin": 80,
+          "net": "VBUS",
+          "category": "USB",
+          "row": "bottom",
+          "row_pos": 1
+        }
+      ]
+    },
+    {
+      "designator": "J2",
+      "part_number": "DF17(3.0)-80DS-0.5V(57)",
+      "name": "MATE_CORE_80DP",
+      "position": "-Y",
+      "core_ref": "80DP",
+      "core_doc_position": "bottom",
+      "mates_core": "80DP",
+      "schematic_x": 80,
+      "schematic_y": 420,
+      "rotation": 180,
+      "mirror": true,
+      "pins": [
+        {
+          "pin": 1,
+          "net": "SCK_EXT1",
+          "category": "SPI EXT1",
+          "row": "top",
+          "row_pos": 1
+        },
+        {
+          "pin": 2,
+          "net": "MISO_EXT1",
+          "category": "SPI EXT1",
+          "row": "top",
+          "row_pos": 2
+        },
+        {
+          "pin": 3,
+          "net": "MOSI_EXT1",
+          "category": "SPI EXT1",
+          "row": "top",
+          "row_pos": 3
+        },
+        {
+          "pin": 4,
+          "net": "CS2_EXT1",
+          "category": "SPI EXT1",
+          "row": "top",
+          "row_pos": 4
+        },
+        {
+          "pin": 5,
+          "net": "CS1_EXT1",
+          "category": "SPI EXT1",
+          "row": "top",
+          "row_pos": 5
+        },
+        {
+          "pin": 6,
+          "net": "nSYNC_EXT1",
+          "category": "SPI EXT1",
+          "row": "top",
+          "row_pos": 6
+        },
+        {
+          "pin": 7,
+          "net": "DRDY1_EXT1",
+          "category": "SPI EXT1",
+          "row": "top",
+          "row_pos": 7
+        },
+        {
+          "pin": 8,
+          "net": "DRDY2_EXT1",
+          "category": "SPI EXT1",
+          "row": "top",
+          "row_pos": 8
+        },
+        {
+          "pin": 9,
+          "net": "SPI_nRST",
+          "category": "SPI EXT1",
+          "row": "top",
+          "row_pos": 9
+        },
+        {
+          "pin": 10,
+          "net": "ADC3_6V6_PORT",
+          "category": "ADC",
+          "row": "top",
+          "row_pos": 10
+        },
+        {
+          "pin": 11,
+          "net": "ADC3_3V3_PORT",
+          "category": "ADC",
+          "row": "top",
+          "row_pos": 11
+        },
+        {
+          "pin": 12,
+          "net": "nARMED_PORT",
+          "category": "FMU",
+          "row": "top",
+          "row_pos": 12
+        },
+        {
+          "pin": 13,
+          "net": "FMU_RST_REQ_PORT",
+          "category": "FMU",
+          "row": "top",
+          "row_pos": 13
+        },
+        {
+          "pin": 14,
+          "net": "FMU_BOOTLOADER_PORT",
+          "category": "FMU",
+          "row": "top",
+          "row_pos": 14
+        },
+        {
+          "pin": 15,
+          "net": "FMU_CAP1_PORT",
+          "category": "FMU",
+          "row": "top",
+          "row_pos": 15
+        },
+        {
+          "pin": 16,
+          "net": "nLED_BLUE",
+          "category": "LED",
+          "row": "top",
+          "row_pos": 16
+        },
+        {
+          "pin": 17,
+          "net": "nLED_GREEN",
+          "category": "LED",
+          "row": "top",
+          "row_pos": 17
+        },
+        {
+          "pin": 18,
+          "net": "nLED_RED",
+          "category": "LED",
+          "row": "top",
+          "row_pos": 18
+        },
+        {
+          "pin": 19,
+          "net": "GND",
+          "category": "地",
+          "row": "top",
+          "row_pos": 19
+        },
+        {
+          "pin": 20,
+          "net": "VDD_5V_IN",
+          "category": "电源",
+          "row": "top",
+          "row_pos": 20
+        },
+        {
+          "pin": 21,
+          "net": "VDD_5V_IN",
+          "category": "电源",
+          "row": "top",
+          "row_pos": 21
+        },
+        {
+          "pin": 22,
+          "net": "GND",
+          "category": "地",
+          "row": "top",
+          "row_pos": 22
+        },
+        {
+          "pin": 23,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 23
+        },
+        {
+          "pin": 24,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 24
+        },
+        {
+          "pin": 25,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 25
+        },
+        {
+          "pin": 26,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 26
+        },
+        {
+          "pin": 27,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 27
+        },
+        {
+          "pin": 28,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 28
+        },
+        {
+          "pin": 29,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 29
+        },
+        {
+          "pin": 30,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 30
+        },
+        {
+          "pin": 31,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 31
+        },
+        {
+          "pin": 32,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 32
+        },
+        {
+          "pin": 33,
+          "net": "GND",
+          "category": "地",
+          "row": "top",
+          "row_pos": 33
+        },
+        {
+          "pin": 34,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 34
+        },
+        {
+          "pin": 35,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 35
+        },
+        {
+          "pin": 36,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 36
+        },
+        {
+          "pin": 37,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 37
+        },
+        {
+          "pin": 38,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 38
+        },
+        {
+          "pin": 39,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 39
+        },
+        {
+          "pin": 40,
+          "net": "NC",
+          "category": null,
+          "row": "top",
+          "row_pos": 40
+        },
+        {
+          "pin": 41,
+          "net": "IO-CH1-PORT",
+          "category": "PWM/IO",
+          "row": "bottom",
+          "row_pos": 40
+        },
+        {
+          "pin": 42,
+          "net": "IO-CH2-PORT",
+          "category": "PWM/IO",
+          "row": "bottom",
+          "row_pos": 39
+        },
+        {
+          "pin": 43,
+          "net": "IO-CH3-PORT",
+          "category": "PWM/IO",
+          "row": "bottom",
+          "row_pos": 38
+        },
+        {
+          "pin": 44,
+          "net": "IO-CH4-PORT",
+          "category": "PWM/IO",
+          "row": "bottom",
+          "row_pos": 37
+        },
+        {
+          "pin": 45,
+          "net": "IO-CH5-PORT",
+          "category": "PWM/IO",
+          "row": "bottom",
+          "row_pos": 36
+        },
+        {
+          "pin": 46,
+          "net": "IO-CH6-PORT",
+          "category": "PWM/IO",
+          "row": "bottom",
+          "row_pos": 35
+        },
+        {
+          "pin": 47,
+          "net": "IO-CH7-PORT",
+          "category": "PWM/IO",
+          "row": "bottom",
+          "row_pos": 34
+        },
+        {
+          "pin": 48,
+          "net": "IO-CH8-PORT",
+          "category": "PWM/IO",
+          "row": "bottom",
+          "row_pos": 33
+        },
+        {
+          "pin": 49,
+          "net": "GND",
+          "category": "地",
+          "row": "bottom",
+          "row_pos": 32
+        },
+        {
+          "pin": 50,
+          "net": "IO_nRST",
+          "category": "IO",
+          "row": "bottom",
+          "row_pos": 31
+        },
+        {
+          "pin": 51,
+          "net": "IO_SPARE_GPIO2",
+          "category": "GPIO",
+          "row": "bottom",
+          "row_pos": 30
+        },
+        {
+          "pin": 52,
+          "net": "IO_SPARE_GPIO1",
+          "category": "GPIO",
+          "row": "bottom",
+          "row_pos": 29
+        },
+        {
+          "pin": 53,
+          "net": "IO_SWCLK",
+          "category": "SWD",
+          "row": "bottom",
+          "row_pos": 28
+        },
+        {
+          "pin": 54,
+          "net": "IO_SWDIO",
+          "category": "SWD",
+          "row": "bottom",
+          "row_pos": 27
+        },
+        {
+          "pin": 55,
+          "net": "IO_SWO",
+          "category": "SWD",
+          "row": "bottom",
+          "row_pos": 26
+        },
+        {
+          "pin": 56,
+          "net": "IO_USART1_TX_DEBUG",
+          "category": "调试串口",
+          "row": "bottom",
+          "row_pos": 25
+        },
+        {
+          "pin": 57,
+          "net": "NC",
+          "category": null,
+          "row": "bottom",
+          "row_pos": 24
+        },
+        {
+          "pin": 58,
+          "net": "VDD_SERVO_IN",
+          "category": "电源",
+          "row": "bottom",
+          "row_pos": 23
+        },
+        {
+          "pin": 59,
+          "net": "NC",
+          "category": null,
+          "row": "bottom",
+          "row_pos": 22
+        },
+        {
+          "pin": 60,
+          "net": "VDD_5V_IN",
+          "category": "电源",
+          "row": "bottom",
+          "row_pos": 21
+        },
+        {
+          "pin": 61,
+          "net": "VDD_5V_IN",
+          "category": "电源",
+          "row": "bottom",
+          "row_pos": 20
+        },
+        {
+          "pin": 62,
+          "net": "NC",
+          "category": null,
+          "row": "bottom",
+          "row_pos": 19
+        },
+        {
+          "pin": 63,
+          "net": "nPOWER_IN_A",
+          "category": "电源检测",
+          "row": "bottom",
+          "row_pos": 18
+        },
+        {
+          "pin": 64,
+          "net": "nPOWER_IN_B",
+          "category": "电源检测",
+          "row": "bottom",
+          "row_pos": 17
+        },
+        {
+          "pin": 65,
+          "net": "nPOWER_IN_C",
+          "category": "电源检测",
+          "row": "bottom",
+          "row_pos": 16
+        },
+        {
+          "pin": 66,
+          "net": "SDA_EXT2",
+          "category": "I2C EXT2",
+          "row": "bottom",
+          "row_pos": 15
+        },
+        {
+          "pin": 67,
+          "net": "SCL_EXT2",
+          "category": "I2C EXT2",
+          "row": "bottom",
+          "row_pos": 14
+        },
+        {
+          "pin": 68,
+          "net": "SDA_GPS1",
+          "category": "I2C GPS1",
+          "row": "bottom",
+          "row_pos": 13
+        },
+        {
+          "pin": 69,
+          "net": "SCL_GPS1",
+          "category": "I2C GPS1",
+          "row": "bottom",
+          "row_pos": 12
+        },
+        {
+          "pin": 70,
+          "net": "SDA_GPS2",
+          "category": "I2C GPS2",
+          "row": "bottom",
+          "row_pos": 11
+        },
+        {
+          "pin": 71,
+          "net": "SCL_GPS2",
+          "category": "I2C GPS2",
+          "row": "bottom",
+          "row_pos": 10
+        },
+        {
+          "pin": 72,
+          "net": "GND",
+          "category": "地",
+          "row": "bottom",
+          "row_pos": 9
+        },
+        {
+          "pin": 73,
+          "net": "NC",
+          "category": null,
+          "row": "bottom",
+          "row_pos": 8
+        },
+        {
+          "pin": 74,
+          "net": "nIO_LED_BLUE",
+          "category": "LED",
+          "row": "bottom",
+          "row_pos": 7
+        },
+        {
+          "pin": 75,
+          "net": "nIO_LED_AMBER",
+          "category": "LED",
+          "row": "bottom",
+          "row_pos": 6
+        },
+        {
+          "pin": 76,
+          "net": "GND",
+          "category": "地",
+          "row": "bottom",
+          "row_pos": 5
+        },
+        {
+          "pin": 77,
+          "net": "CAN1_P",
+          "category": "CAN",
+          "row": "bottom",
+          "row_pos": 4
+        },
+        {
+          "pin": 78,
+          "net": "CAN1_N",
+          "category": "CAN",
+          "row": "bottom",
+          "row_pos": 3
+        },
+        {
+          "pin": 79,
+          "net": "CAN2_P",
+          "category": "CAN",
+          "row": "bottom",
+          "row_pos": 2
+        },
+        {
+          "pin": 80,
+          "net": "CAN2_N",
+          "category": "CAN",
+          "row": "bottom",
+          "row_pos": 1
+        }
+      ]
+    }
+  ],
+  "eda_steps": [
+    "删除多余原理图页，仅保留一页并重命名为 Core_Carrier",
+    "库中搜索 Hirose DF17 官方 footprint/symbol（80DP / 80DS）",
+    "放置 J1=80DP @ +Y、J2=80DS @ −Y，载板侧 mirror=true",
+    "Pin1 位于连接器左上，与 carrier-pcb.dxf PIN1 标记对齐",
+    "NC 引脚加 No Connect；GND 引脚后续统一接 GND 符号（手动）",
+    "PCB 导入 carrier-pcb.dxf 后替换 DXF 参考焊盘为官方封装"
+  ],
+  "mcp_api_sequence": [
+    {
+      "step": "rename_page",
+      "api": "eda.dmt_Schematic.modifySchematicPageName",
+      "args_note": "[pageUuid, 'Core_Carrier']"
+    },
+    {
+      "step": "title_text",
+      "api": "eda.sch_PrimitiveText.create",
+      "args": [
+        50,
+        30,
+        "X9 Core 载板 — 双 DF17 80P",
+        0,
+        null,
+        null,
+        14,
+        true
+      ]
+    },
+    {
+      "step": "note_text",
+      "api": "eda.sch_PrimitiveText.create",
+      "args": [
+        50,
+        55,
+        "载板侧连接器需镜像反向（零一官方说明）。本页仅 Core 对接座，不含外设。",
+        0,
+        null,
+        null,
+        10,
+        false
+      ]
+    },
+    {
+      "step": "place_j1_j2",
+      "api": "eda.sch_PrimitiveComponent.create",
+      "args_note": "需 component_select 确认 uuid/libraryUuid 后放置"
+    }
+  ]
+}

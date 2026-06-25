@@ -1,0 +1,685 @@
+{
+  "description": "DF17 载板镜像符号 — MCP 执行步骤",
+  "pinLayout": [
+    {
+      "pinNumber": "1",
+      "x": 390,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "80",
+      "x": 390,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "2",
+      "x": 380,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "79",
+      "x": 380,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "3",
+      "x": 370,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "78",
+      "x": 370,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "4",
+      "x": 360,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "77",
+      "x": 360,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "5",
+      "x": 350,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "76",
+      "x": 350,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "6",
+      "x": 340,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "75",
+      "x": 340,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "7",
+      "x": 330,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "74",
+      "x": 330,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "8",
+      "x": 320,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "73",
+      "x": 320,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "9",
+      "x": 310,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "72",
+      "x": 310,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "10",
+      "x": 300,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "71",
+      "x": 300,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "11",
+      "x": 290,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "70",
+      "x": 290,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "12",
+      "x": 280,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "69",
+      "x": 280,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "13",
+      "x": 270,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "68",
+      "x": 270,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "14",
+      "x": 260,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "67",
+      "x": 260,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "15",
+      "x": 250,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "66",
+      "x": 250,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "16",
+      "x": 240,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "65",
+      "x": 240,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "17",
+      "x": 230,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "64",
+      "x": 230,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "18",
+      "x": 220,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "63",
+      "x": 220,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "19",
+      "x": 210,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "62",
+      "x": 210,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "20",
+      "x": 200,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "61",
+      "x": 200,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "21",
+      "x": 190,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "60",
+      "x": 190,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "22",
+      "x": 180,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "59",
+      "x": 180,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "23",
+      "x": 170,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "58",
+      "x": 170,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "24",
+      "x": 160,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "57",
+      "x": 160,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "25",
+      "x": 150,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "56",
+      "x": 150,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "26",
+      "x": 140,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "55",
+      "x": 140,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "27",
+      "x": 130,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "54",
+      "x": 130,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "28",
+      "x": 120,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "53",
+      "x": 120,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "29",
+      "x": 110,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "52",
+      "x": 110,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "30",
+      "x": 100,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "51",
+      "x": 100,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "31",
+      "x": 90,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "50",
+      "x": 90,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "32",
+      "x": 80,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "49",
+      "x": 80,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "33",
+      "x": 70,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "48",
+      "x": 70,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "34",
+      "x": 60,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "47",
+      "x": 60,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "35",
+      "x": 50,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "46",
+      "x": 50,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "36",
+      "x": 40,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "45",
+      "x": 40,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "37",
+      "x": 30,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "44",
+      "x": 30,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "38",
+      "x": 20,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "43",
+      "x": 20,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "39",
+      "x": 10,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "42",
+      "x": 10,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "40",
+      "x": 0,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "41",
+      "x": 0,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "81",
+      "x": -15,
+      "y": 10,
+      "rotation": 0
+    },
+    {
+      "pinNumber": "82",
+      "x": 405,
+      "y": 10,
+      "rotation": 180
+    }
+  ],
+  "sourceSymbols": {
+    "80DP": {
+      "symbolUuid": "aacd252d459658c7",
+      "libraryUuid": "4297f1465aa64d66b16af1faf5416d0b",
+      "deviceUuid": "e6705924e6ed3dc5",
+      "deviceLibraryUuid": "176f93f9fa8e444e9152cfea941f0716",
+      "footprintUuid": "41014d676388e9b3",
+      "footprintLibraryUuid": "11d64e09bf6d49a69a9ff4c79f03007d",
+      "newSymbolName": "DF17-80DP-carrier-mirror",
+      "newDeviceName": "DF17-80DP-carrier-mirror"
+    },
+    "80DS": {
+      "symbolUuid": "4b5cf0754c5b827f",
+      "libraryUuid": "5e386959b89145bb99e7b30e7f347b38",
+      "deviceUuid": "9793f502e118ff4b",
+      "deviceLibraryUuid": "b51f303c81fa48c2af5e1e3914fe31dd",
+      "footprintUuid": "26191b657f4ba01e",
+      "footprintLibraryUuid": "7959c201ad8f414db07dc6f76415daaf",
+      "newSymbolName": "DF17-80DS-carrier-mirror",
+      "newDeviceName": "DF17-80DS-carrier-mirror"
+    }
+  },
+  "mcpSteps": [
+    {
+      "step": "get_project_library",
+      "api": "eda.lib_LibrariesList.getProjectLibraryUuid",
+      "args": [],
+      "save_as": "projectLibUuid"
+    },
+    {
+      "step": "copy_symbol_80dp",
+      "api": "eda.lib_Symbol.copy",
+      "args": [
+        "aacd252d459658c7",
+        "4297f1465aa64d66b16af1faf5416d0b",
+        "${projectLibUuid}",
+        null,
+        "DF17-80DP-carrier-mirror"
+      ],
+      "save_as": "newSymbolUuid_80dp"
+    },
+    {
+      "step": "open_symbol_80dp",
+      "api": "eda.lib_Symbol.openInEditor",
+      "args": [
+        "${newSymbolUuid_80dp}",
+        "${projectLibUuid}"
+      ],
+      "note": "打开符号编辑器后，删除原引脚，按 pin_layout 重建"
+    },
+    {
+      "step": "copy_device_80dp",
+      "api": "eda.lib_Device.copy",
+      "args": [
+        "e6705924e6ed3dc5",
+        "176f93f9fa8e444e9152cfea941f0716",
+        "${projectLibUuid}",
+        null,
+        "DF17-80DP-carrier-mirror"
+      ],
+      "save_as": "newDeviceUuid_80dp"
+    },
+    {
+      "step": "bind_symbol_80dp",
+      "api": "eda.lib_Device.modify",
+      "args": [
+        "${newDeviceUuid_80dp}",
+        "${projectLibUuid}",
+        "DF17-80DP-carrier-mirror",
+        null,
+        {
+          "symbolUuid": "${newSymbolUuid_80dp}",
+          "symbol": {
+            "uuid": "${newSymbolUuid_80dp}",
+            "libraryUuid": "${projectLibUuid}"
+          },
+          "footprintUuid": "41014d676388e9b3",
+          "footprint": {
+            "uuid": "41014d676388e9b3",
+            "libraryUuid": "11d64e09bf6d49a69a9ff4c79f03007d"
+          }
+        }
+      ]
+    },
+    {
+      "step": "copy_symbol_80ds",
+      "api": "eda.lib_Symbol.copy",
+      "args": [
+        "4b5cf0754c5b827f",
+        "5e386959b89145bb99e7b30e7f347b38",
+        "${projectLibUuid}",
+        null,
+        "DF17-80DS-carrier-mirror"
+      ],
+      "save_as": "newSymbolUuid_80ds"
+    },
+    {
+      "step": "open_symbol_80ds",
+      "api": "eda.lib_Symbol.openInEditor",
+      "args": [
+        "${newSymbolUuid_80ds}",
+        "${projectLibUuid}"
+      ],
+      "note": "打开符号编辑器后，删除原引脚，按 pin_layout 重建"
+    },
+    {
+      "step": "copy_device_80ds",
+      "api": "eda.lib_Device.copy",
+      "args": [
+        "9793f502e118ff4b",
+        "b51f303c81fa48c2af5e1e3914fe31dd",
+        "${projectLibUuid}",
+        null,
+        "DF17-80DS-carrier-mirror"
+      ],
+      "save_as": "newDeviceUuid_80ds"
+    },
+    {
+      "step": "bind_symbol_80ds",
+      "api": "eda.lib_Device.modify",
+      "args": [
+        "${newDeviceUuid_80ds}",
+        "${projectLibUuid}",
+        "DF17-80DS-carrier-mirror",
+        null,
+        {
+          "symbolUuid": "${newSymbolUuid_80ds}",
+          "symbol": {
+            "uuid": "${newSymbolUuid_80ds}",
+            "libraryUuid": "${projectLibUuid}"
+          },
+          "footprintUuid": "26191b657f4ba01e",
+          "footprint": {
+            "uuid": "26191b657f4ba01e",
+            "libraryUuid": "7959c201ad8f414db07dc6f76415daaf"
+          }
+        }
+      ]
+    },
+    {
+      "step": "place_j1",
+      "api": "eda.sch_PrimitiveComponent.create",
+      "args": [
+        {
+          "libraryUuid": "${projectLibUuid}",
+          "uuid": "${newDeviceUuid_80dp}"
+        },
+        120,
+        100,
+        null,
+        0,
+        false,
+        true,
+        true
+      ],
+      "then_modify": {
+        "designator": "J1",
+        "name": "MATE_CORE_80DS"
+      }
+    },
+    {
+      "step": "place_j2",
+      "api": "eda.sch_PrimitiveComponent.create",
+      "args": [
+        {
+          "libraryUuid": "${projectLibUuid}",
+          "uuid": "${newDeviceUuid_80ds}"
+        },
+        120,
+        320,
+        null,
+        0,
+        false,
+        true,
+        true
+      ],
+      "then_modify": {
+        "designator": "J2",
+        "name": "MATE_CORE_80DP"
+      }
+    }
+  ],
+  "symbolEditorNotes": [
+    "复制符号后 openInEditor，在符号编辑器内用 sch_PrimitivePin.create 按 pinLayout 放置 82 个引脚",
+    "sch_PrimitivePin.create(x, y, pinNumber, pinNumber, rotation, pinLength)",
+    "画矩形外框连接两排引脚；Pin1 圆点标在右上角",
+    "rotation=0 mirror=false 放置，无需再旋转"
+  ]
+}
