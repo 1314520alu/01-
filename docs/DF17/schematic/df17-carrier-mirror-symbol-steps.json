@@ -8,313 +8,313 @@
       "rotation": 270
     },
     {
-      "pinNumber": "80",
+      "pinNumber": "2",
       "x": 390,
       "y": 20,
       "rotation": 90
     },
     {
-      "pinNumber": "2",
-      "x": 380,
-      "y": 0,
-      "rotation": 270
-    },
-    {
-      "pinNumber": "79",
-      "x": 380,
-      "y": 20,
-      "rotation": 90
-    },
-    {
       "pinNumber": "3",
-      "x": 370,
+      "x": 380,
       "y": 0,
       "rotation": 270
-    },
-    {
-      "pinNumber": "78",
-      "x": 370,
-      "y": 20,
-      "rotation": 90
     },
     {
       "pinNumber": "4",
-      "x": 360,
-      "y": 0,
-      "rotation": 270
-    },
-    {
-      "pinNumber": "77",
-      "x": 360,
+      "x": 380,
       "y": 20,
       "rotation": 90
     },
     {
       "pinNumber": "5",
-      "x": 350,
+      "x": 370,
       "y": 0,
       "rotation": 270
-    },
-    {
-      "pinNumber": "76",
-      "x": 350,
-      "y": 20,
-      "rotation": 90
     },
     {
       "pinNumber": "6",
-      "x": 340,
-      "y": 0,
-      "rotation": 270
-    },
-    {
-      "pinNumber": "75",
-      "x": 340,
+      "x": 370,
       "y": 20,
       "rotation": 90
     },
     {
       "pinNumber": "7",
-      "x": 330,
+      "x": 360,
       "y": 0,
       "rotation": 270
-    },
-    {
-      "pinNumber": "74",
-      "x": 330,
-      "y": 20,
-      "rotation": 90
     },
     {
       "pinNumber": "8",
-      "x": 320,
-      "y": 0,
-      "rotation": 270
-    },
-    {
-      "pinNumber": "73",
-      "x": 320,
+      "x": 360,
       "y": 20,
       "rotation": 90
     },
     {
       "pinNumber": "9",
-      "x": 310,
+      "x": 350,
       "y": 0,
       "rotation": 270
-    },
-    {
-      "pinNumber": "72",
-      "x": 310,
-      "y": 20,
-      "rotation": 90
     },
     {
       "pinNumber": "10",
-      "x": 300,
-      "y": 0,
-      "rotation": 270
-    },
-    {
-      "pinNumber": "71",
-      "x": 300,
+      "x": 350,
       "y": 20,
       "rotation": 90
     },
     {
       "pinNumber": "11",
-      "x": 290,
+      "x": 340,
       "y": 0,
       "rotation": 270
-    },
-    {
-      "pinNumber": "70",
-      "x": 290,
-      "y": 20,
-      "rotation": 90
     },
     {
       "pinNumber": "12",
-      "x": 280,
-      "y": 0,
-      "rotation": 270
-    },
-    {
-      "pinNumber": "69",
-      "x": 280,
+      "x": 340,
       "y": 20,
       "rotation": 90
     },
     {
       "pinNumber": "13",
-      "x": 270,
+      "x": 330,
       "y": 0,
       "rotation": 270
-    },
-    {
-      "pinNumber": "68",
-      "x": 270,
-      "y": 20,
-      "rotation": 90
     },
     {
       "pinNumber": "14",
-      "x": 260,
-      "y": 0,
-      "rotation": 270
-    },
-    {
-      "pinNumber": "67",
-      "x": 260,
+      "x": 330,
       "y": 20,
       "rotation": 90
     },
     {
       "pinNumber": "15",
-      "x": 250,
+      "x": 320,
       "y": 0,
       "rotation": 270
-    },
-    {
-      "pinNumber": "66",
-      "x": 250,
-      "y": 20,
-      "rotation": 90
     },
     {
       "pinNumber": "16",
-      "x": 240,
-      "y": 0,
-      "rotation": 270
-    },
-    {
-      "pinNumber": "65",
-      "x": 240,
+      "x": 320,
       "y": 20,
       "rotation": 90
     },
     {
       "pinNumber": "17",
-      "x": 230,
+      "x": 310,
       "y": 0,
       "rotation": 270
-    },
-    {
-      "pinNumber": "64",
-      "x": 230,
-      "y": 20,
-      "rotation": 90
     },
     {
       "pinNumber": "18",
-      "x": 220,
-      "y": 0,
-      "rotation": 270
-    },
-    {
-      "pinNumber": "63",
-      "x": 220,
+      "x": 310,
       "y": 20,
       "rotation": 90
     },
     {
       "pinNumber": "19",
-      "x": 210,
+      "x": 300,
       "y": 0,
       "rotation": 270
-    },
-    {
-      "pinNumber": "62",
-      "x": 210,
-      "y": 20,
-      "rotation": 90
     },
     {
       "pinNumber": "20",
-      "x": 200,
-      "y": 0,
-      "rotation": 270
-    },
-    {
-      "pinNumber": "61",
-      "x": 200,
+      "x": 300,
       "y": 20,
       "rotation": 90
     },
     {
       "pinNumber": "21",
-      "x": 190,
+      "x": 290,
       "y": 0,
       "rotation": 270
-    },
-    {
-      "pinNumber": "60",
-      "x": 190,
-      "y": 20,
-      "rotation": 90
     },
     {
       "pinNumber": "22",
-      "x": 180,
-      "y": 0,
-      "rotation": 270
-    },
-    {
-      "pinNumber": "59",
-      "x": 180,
+      "x": 290,
       "y": 20,
       "rotation": 90
     },
     {
       "pinNumber": "23",
-      "x": 170,
+      "x": 280,
       "y": 0,
       "rotation": 270
-    },
-    {
-      "pinNumber": "58",
-      "x": 170,
-      "y": 20,
-      "rotation": 90
     },
     {
       "pinNumber": "24",
-      "x": 160,
-      "y": 0,
-      "rotation": 270
-    },
-    {
-      "pinNumber": "57",
-      "x": 160,
+      "x": 280,
       "y": 20,
       "rotation": 90
     },
     {
       "pinNumber": "25",
-      "x": 150,
+      "x": 270,
       "y": 0,
       "rotation": 270
-    },
-    {
-      "pinNumber": "56",
-      "x": 150,
-      "y": 20,
-      "rotation": 90
     },
     {
       "pinNumber": "26",
-      "x": 140,
-      "y": 0,
-      "rotation": 270
-    },
-    {
-      "pinNumber": "55",
-      "x": 140,
+      "x": 270,
       "y": 20,
       "rotation": 90
     },
     {
       "pinNumber": "27",
+      "x": 260,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "28",
+      "x": 260,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "29",
+      "x": 250,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "30",
+      "x": 250,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "31",
+      "x": 240,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "32",
+      "x": 240,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "33",
+      "x": 230,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "34",
+      "x": 230,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "35",
+      "x": 220,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "36",
+      "x": 220,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "37",
+      "x": 210,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "38",
+      "x": 210,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "39",
+      "x": 200,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "40",
+      "x": 200,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "41",
+      "x": 190,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "42",
+      "x": 190,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "43",
+      "x": 180,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "44",
+      "x": 180,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "45",
+      "x": 170,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "46",
+      "x": 170,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "47",
+      "x": 160,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "48",
+      "x": 160,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "49",
+      "x": 150,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "50",
+      "x": 150,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "51",
+      "x": 140,
+      "y": 0,
+      "rotation": 270
+    },
+    {
+      "pinNumber": "52",
+      "x": 140,
+      "y": 20,
+      "rotation": 90
+    },
+    {
+      "pinNumber": "53",
       "x": 130,
       "y": 0,
       "rotation": 270
@@ -326,157 +326,157 @@
       "rotation": 90
     },
     {
-      "pinNumber": "28",
+      "pinNumber": "55",
       "x": 120,
       "y": 0,
       "rotation": 270
     },
     {
-      "pinNumber": "53",
+      "pinNumber": "56",
       "x": 120,
       "y": 20,
       "rotation": 90
     },
     {
-      "pinNumber": "29",
+      "pinNumber": "57",
       "x": 110,
       "y": 0,
       "rotation": 270
     },
     {
-      "pinNumber": "52",
+      "pinNumber": "58",
       "x": 110,
       "y": 20,
       "rotation": 90
     },
     {
-      "pinNumber": "30",
+      "pinNumber": "59",
       "x": 100,
       "y": 0,
       "rotation": 270
     },
     {
-      "pinNumber": "51",
+      "pinNumber": "60",
       "x": 100,
       "y": 20,
       "rotation": 90
     },
     {
-      "pinNumber": "31",
+      "pinNumber": "61",
       "x": 90,
       "y": 0,
       "rotation": 270
     },
     {
-      "pinNumber": "50",
+      "pinNumber": "62",
       "x": 90,
       "y": 20,
       "rotation": 90
     },
     {
-      "pinNumber": "32",
+      "pinNumber": "63",
       "x": 80,
       "y": 0,
       "rotation": 270
     },
     {
-      "pinNumber": "49",
+      "pinNumber": "64",
       "x": 80,
       "y": 20,
       "rotation": 90
     },
     {
-      "pinNumber": "33",
+      "pinNumber": "65",
       "x": 70,
       "y": 0,
       "rotation": 270
     },
     {
-      "pinNumber": "48",
+      "pinNumber": "66",
       "x": 70,
       "y": 20,
       "rotation": 90
     },
     {
-      "pinNumber": "34",
+      "pinNumber": "67",
       "x": 60,
       "y": 0,
       "rotation": 270
     },
     {
-      "pinNumber": "47",
+      "pinNumber": "68",
       "x": 60,
       "y": 20,
       "rotation": 90
     },
     {
-      "pinNumber": "35",
+      "pinNumber": "69",
       "x": 50,
       "y": 0,
       "rotation": 270
     },
     {
-      "pinNumber": "46",
+      "pinNumber": "70",
       "x": 50,
       "y": 20,
       "rotation": 90
     },
     {
-      "pinNumber": "36",
+      "pinNumber": "71",
       "x": 40,
       "y": 0,
       "rotation": 270
     },
     {
-      "pinNumber": "45",
+      "pinNumber": "72",
       "x": 40,
       "y": 20,
       "rotation": 90
     },
     {
-      "pinNumber": "37",
+      "pinNumber": "73",
       "x": 30,
       "y": 0,
       "rotation": 270
     },
     {
-      "pinNumber": "44",
+      "pinNumber": "74",
       "x": 30,
       "y": 20,
       "rotation": 90
     },
     {
-      "pinNumber": "38",
+      "pinNumber": "75",
       "x": 20,
       "y": 0,
       "rotation": 270
     },
     {
-      "pinNumber": "43",
+      "pinNumber": "76",
       "x": 20,
       "y": 20,
       "rotation": 90
     },
     {
-      "pinNumber": "39",
+      "pinNumber": "77",
       "x": 10,
       "y": 0,
       "rotation": 270
     },
     {
-      "pinNumber": "42",
+      "pinNumber": "78",
       "x": 10,
       "y": 20,
       "rotation": 90
     },
     {
-      "pinNumber": "40",
+      "pinNumber": "79",
       "x": 0,
       "y": 0,
       "rotation": 270
     },
     {
-      "pinNumber": "41",
+      "pinNumber": "80",
       "x": 0,
       "y": 20,
       "rotation": 90
@@ -665,8 +665,8 @@
         120,
         320,
         null,
-        0,
-        false,
+        270,
+        true,
         true,
         true
       ],
@@ -680,6 +680,6 @@
     "复制符号后 openInEditor，在符号编辑器内用 sch_PrimitivePin.create 按 pinLayout 放置 82 个引脚",
     "sch_PrimitivePin.create(x, y, pinNumber, pinNumber, rotation, pinLength)",
     "画矩形外框连接两排引脚；Pin1 圆点标在右上角",
-    "rotation=0 mirror=false 放置，无需再旋转"
+    "J1 carrier-mirror：rotation=0 mirror=false；J2 carrier-mirror：rotation=180 mirror=false"
   ]
 }

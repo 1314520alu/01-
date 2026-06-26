@@ -1,15 +1,17 @@
-# DF17(3.0)-80DS-0.5V(57) 引脚定义
+# 载板 DF17(1.0H)-80DP-0.5V(57) 引脚定义
 
 | 项目 | 说明 |
 |------|------|
-| 座子型号 | DF17(3.0)-80DS-0.5V(57) |
-| 角色 | **Core** |
+| 角色 | **载板** |
+| 座子型号 | DF17(1.0H)-80DP-0.5V(57) |
 | 引脚总数 | 80 |
-| 编号约定 | **Core 底视**：上排奇数 Pin1,3,…,79（左→右）；下排偶数 Pin2,4,…,80（左→右） |
-| 四角定位 | Pin1 左上 · Pin2 左下 · Pin79 右上 · Pin80 右下 |
-| 载板 PCB | Top View，相对 Core 底视 **左右 180° 镜像**；载板 **DP 配 Core DS** |
+| 载板位置 | PCB **+Y** |
+| 对接 Core | **80DS** |
+| 网络来源 | 同 Pin 号取自 [Core 80DS](DF17-80DS-pinout.md) |
+| 编号约定 | 上排奇数 Pin1,3,…,79（左→右）；下排偶数 Pin2,4,…,80（左→右） |
+| 载板 Top View | Pin1 **右上** · Pin2 **右下** · Pin79 **左上** · Pin80 **左下**（相对 Core 底视左右 180° 镜像） |
 
-> 飞控底部视图。载板侧连接器符号需镜像（Pin1 在载板符号右上，Pin80 在左下）。与 [80DP 座子](DF17-80DP-pinout.md) 配对使用。
+> 载板原理图/PCB 标网用本表。Core 侧定义见 [80DS](DF17-80DS-pinout.md)。
 
 ---
 
@@ -100,113 +102,8 @@
 
 ---
 
-## 功能分组
-
-### 电源
-
-| Pin | 信号名 | 说明 |
-|-----|--------|------|
-| 39–42 | VDD_5V_IN | 5 V 输入 |
-| 58 | VDD_SERVO_IN | 舵机/外设 5 V 输入 |
-| 63 | nPOWER_IN_A | 电源输入检测 A |
-| 64 | nPOWER_IN_B | 电源输入检测 B |
-| 65 | nPOWER_IN_C | 电源输入检测 C |
-
-### 地（GND）
-
-Pin：10, 18, 37, 43, 64–65
-
-### PWM / IO 通道
-
-| Pin | 信号名 |
-|-----|--------|
-| 66 | IO-CH8-PORT |
-| 68 | IO-CH7-PORT |
-| 70 | IO-CH6-PORT |
-| 72 | IO-CH5-PORT |
-| 74 | IO-CH4-PORT |
-| 76 | IO-CH3-PORT |
-| 78 | IO-CH2-PORT |
-| 80 | IO-CH1-PORT |
-
-### CAN 总线
-
-| Pin | 信号名 |
-|-----|--------|
-| 2 | CAN2_N |
-| 4 | CAN2_P |
-| 6 | CAN1_N |
-| 8 | CAN1_P |
-
-### I2C
-
-| 总线 | SCL Pin | SDA Pin |
-|------|---------|---------|
-| GPS1 | 24 | 26 |
-| GPS2 | 20 | 22 |
-| EXT2 | 28 | 30 |
-
-### SPI EXT1
-
-| Pin | 信号名 |
-|-----|--------|
-| 1 | SCK_EXT1 |
-| 3 | MISO_EXT1 |
-| 5 | MOSI_EXT1 |
-| 7 | CS2_EXT1 |
-| 9 | CS1_EXT1 |
-| 11 | nSYNC_EXT1 |
-| 13 | DRDY1_EXT1 |
-| 15 | DRDY2_EXT1 |
-| 17 | SPI_nRST |
-
-### SWD 调试（IO 侧）
-
-| Pin | 信号名 |
-|-----|--------|
-| 50 | IO_USART1_TX_DEBUG |
-| 52 | IO_SWO |
-| 54 | IO_SWDIO |
-| 56 | IO_SWCLK |
-
-### FMU 控制 / 状态
-
-| Pin | 信号名 |
-|-----|--------|
-| 19 | ADC3_6V6_PORT |
-| 21 | ADC3_3V3_PORT |
-| 23 | nARMED_PORT |
-| 25 | FMU_RST_REQ_PORT |
-| 27 | FMU_BOOTLOADER_PORT |
-| 29 | FMU_CAP1_PORT |
-
-### LED
-
-| Pin | 信号名 | 说明 |
-|-----|--------|------|
-| 16 | nLED_BLUE | FMU 蓝灯 |
-| 17 | nLED_GREEN | FMU 绿灯 |
-| 18 | nLED_RED | FMU 红灯 |
-| 74 | nIO_LED_BLUE | IO 蓝灯 |
-| 75 | nIO_LED_AMBER | IO 琥珀灯 |
-
-### GPIO / 复位
-
-| Pin | 信号名 |
-|-----|--------|
-| 58 | IO_SPARE_GPIO1 |
-| 60 | IO_SPARE_GPIO2 |
-| 62 | IO_nRST |
-
-### 未连接（NC）
-
-Pin：16, 38, 44, 45, 47, 48, 49, 51, 53, 55, 57, 59, 61, 63, 67, 69, 71, 73, 75, 77, 79
-
----
-
 ## 修订记录
 
 | 日期 | 说明 |
 |------|------|
-| 2026-06-25 | 从零一 X9 Core DF17 引脚图提取 |
-| 2026-06-25 | 编号改为奇偶交错：Pin1 左上、Pin2 左下、Pin79 右上、Pin80 右下 |
+| 2026-06-25 | 由 Core 引脚表交叉映射生成（载板 DS←Core DP，载板 DP←Core DS） |

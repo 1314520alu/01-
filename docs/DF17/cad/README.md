@@ -59,7 +59,7 @@ python tools/generate_carrier_pcb_dxf.py    # 载板 PCB
 | 安装孔 | 32 × 32，φ2.50（M2 螺丝） |
 | 上侧 (+Y) | **80DP**（对接 Core 80DS） |
 | 下侧 (−Y) | **80DS**（对接 Core 80DP） |
-| Pin1 | 每颗连接器 **左上**，与 pinout 约定一致 |
+| Pin1 | Core 底视每颗连接器 **左上**（Pin2 左下）；载板 **右上**（镜像） |
 
 ### EasyEDA 导入
 

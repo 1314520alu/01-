@@ -43,10 +43,25 @@ python tools/generate_carrier_pcb_dxf.py
 Cursor ↔ 嘉立创 EDA 桥接：`ws://127.0.0.1:8760/bridge/ws`  
 配置与故障修复见 [JLCEDA-MCP-配置与修复.md](JLCEDA-MCP-配置与修复.md)
 
-| 座子型号 | 文档 | 主要功能 |
-|----------|------|----------|
-| DF17(3.0)-80DS-0.5V(57) | [DF17-80DS-pinout.md](DF17-80DS-pinout.md) | SPI、CAN、I2C、IO 侧 PWM/SWD |
-| DF17(1.0H)-80DP-0.5V(57) | [DF17-80DP-pinout.md](DF17-80DP-pinout.md) | UART、FMU PWM、以太网、USB、RC、电源控制 |
+| 座子型号 | 文档 | 视角 | 主要功能 |
+|----------|------|------|----------|
+| DF17(3.0)-80DS-0.5V(57) | [DF17-80DS-pinout.md](DF17-80DS-pinout.md) | **Core** | SPI、CAN、I2C、IO 侧 PWM/SWD |
+| DF17(1.0H)-80DP-0.5V(57) | [DF17-80DP-pinout.md](DF17-80DP-pinout.md) | **Core** | UART、FMU PWM、以太网、USB、RC、电源控制 |
+| DF17(3.0)-80DS-0.5V(57) | [carrier-80DS-pinout.md](carrier-80DS-pinout.md) | **载板 −Y** | 对接 Core 80DP，网络同 Core DP 表 |
+| DF17(1.0H)-80DP-0.5V(57) | [carrier-80DP-pinout.md](carrier-80DP-pinout.md) | **载板 +Y** | 对接 Core 80DS，网络同 Core DS 表 |
+
+## 原理图放置（LCSC 标准符号）
+
+**原理图页面**与 Core 官方引脚图同序（上 80DS、下 80DP），便于对照；**PCB 贴装**仍为 +Y=80DP、−Y=80DS。
+
+| 原理图 | 座子 | PCB | rotation | mirror | Pin1 位置 |
+|--------|------|-----|----------|--------|-----------|
+| 上 J1 | 80DS | −Y | **90** | **true** | 右上 |
+| 下 J2 | 80DP | +Y | **270** | **true** | 左下 |
+
+各座子标网取自 **载板引脚表**（[carrier-80DS](carrier-80DS-pinout.md) / [carrier-80DP](carrier-80DP-pinout.md)：载板 DS←Core DP，载板 DP←Core DS）。
+
+勿用 rotation=270 **无**镜像，或两座子相同 rotation——会导致与 Core 文档不对称。
 
 ## 数据库
 
@@ -58,32 +73,47 @@ Cursor ↔ 嘉立创 EDA 桥接：`ws://127.0.0.1:8760/bridge/ws`
 | [tools/import_df17_pinout.py](../tools/import_df17_pinout.py) | 从 Markdown 导入/更新数据库 |
 
 ```bash
+python tools/generate_carrier_pinout_md.py   # 从 Core md 生载板 md
 python tools/import_df17_pinout.py
+python tools/setup_core_carrier_schematic.py
 ```
 
 常用查询示例：
 
 ```sql
--- 某座子全部引脚
-SELECT pin_number, signal_name, category, row, row_position
+-- 载板 80DP 全部引脚
+SELECT pin_number, signal_name, category
 FROM pins p JOIN connectors c ON p.connector_id = c.id
-WHERE c.part_number = 'DF17(3.0)-80DS-0.5V(57)'
+WHERE c.part_number = 'DF17(1.0H)-80DP-0.5V(57)' AND c.role = 'carrier'
 ORDER BY pin_number;
 
--- 按信号名搜索
-SELECT c.part_number, p.pin_number, p.signal_name
+-- Core 80DS 全部引脚
+SELECT pin_number, signal_name, category
+FROM pins p JOIN connectors c ON p.connector_id = c.id
+WHERE c.part_number = 'DF17(3.0)-80DS-0.5V(57)' AND c.role = 'core'
+ORDER BY pin_number;
+
+-- 按信号名搜索（含载板）
+SELECT c.role, c.part_number, p.pin_number, p.signal_name
 FROM pins p JOIN connectors c ON p.connector_id = c.id
 WHERE p.signal_name LIKE '%CAN%'
-ORDER BY c.part_number, p.pin_number;
+ORDER BY c.role, c.part_number, p.pin_number;
 ```
 
 ## 编号约定
 
-- **左上 = Pin 1**
-- **左下 = Pin 80**
-- 上行 1→40 自左向右；下行 80→41 自左向右
+**Core 底视**（两颗座子相同）：
+
+- 上排奇数：**1, 3, 5, …, 79**（左 → 右）
+- 下排偶数：**2, 4, 6, …, 80**（左 → 右）
+- 四角：**Pin1 左上 · Pin2 左下 · Pin79 右上 · Pin80 右下**
+
+**载板 PCB**（Top View，相对 Core 左右 180° 镜像）：
+
+- **Pin1 右上 · Pin2 右下 · Pin79 左上 · Pin80 左下**
+- 载板 **DP 配 Core DS**，载板 **DS 配 Core DP**
 
 ## 待补充
 
 - [x] 底面机械 CAD（见 [cad/X9-Core-bottom.dxf](cad/X9-Core-bottom.dxf)；M2 孔位待官方复核）
-- [ ] 载板侧网络名与原理图符号核对
+- [x] 载板侧网络名（见 [carrier-80DS-pinout.md](carrier-80DS-pinout.md)、[carrier-80DP-pinout.md](carrier-80DP-pinout.md)）

@@ -7,7 +7,7 @@
 | 文件 | 说明 |
 |------|------|
 | [docs/X9-Core-多旋翼底板-接口设计说明.md](docs/X9-Core-多旋翼底板-接口设计说明.md) | 接口需求、电源架构、串口映射、PWM/CAN 分配 |
-| [docs/DF17/](docs/DF17/) | 两颗 DF17 80pin 引脚定义（[80DS](docs/DF17/DF17-80DS-pinout.md) / [80DP](docs/DF17/DF17-80DP-pinout.md)） |
+| [docs/DF17/](docs/DF17/) | DF17 引脚：Core（[80DS](docs/DF17/DF17-80DS-pinout.md)/[80DP](docs/DF17/DF17-80DP-pinout.md)）+ 载板（[carrier-80DS](docs/DF17/carrier-80DS-pinout.md)/[carrier-80DP](docs/DF17/carrier-80DP-pinout.md)） |
 | [db/pinout.db](db/pinout.db) | SQLite 引脚库（`python tools/import_df17_pinout.py` 同步） |
 | [docs/DF17/cad/](docs/DF17/cad/) | X9 Core 底面 DXF 机械图 |
 
@@ -15,7 +15,7 @@
 
 1. 向零一飞行索取 **DF17 封装尺寸 DXF**（pinout 已录入 [docs/DF17/](docs/DF17/)）
 2. 在 EasyEDA 按设计说明第 9 节分区绘制原理图
-3. 载板原理图网络名与 [80DS](docs/DF17/DF17-80DS-pinout.md)、[80DP](docs/DF17/DF17-80DP-pinout.md) pinout 核对
+3. 载板原理图标网以 [carrier-80DS/80DP](docs/DF17/) 为准（载板 DS←Core DP，载板 DP←Core DS）
 
 ## 固件
 

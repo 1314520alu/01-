@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """X9 Core 载板 — 单页原理图规格（仅两颗 80P DF17）。
 
-载板 Top View（见 docs/DF17/cad/carrier-pcb.dxf）：
-  J1 (+Y)  DF17(1.0H)-80DP  对接 X9 Core 底部 80DS
-  J2 (−Y)  DF17(3.0)-80DS  对接 X9 Core 底部 80DP
+载板 PCB Top View（见 docs/DF17/cad/carrier-pcb.dxf）：
+  +Y  DF17(1.0H)-80DP  对接 Core 80DS
+  −Y  DF17(3.0)-80DS  对接 Core 80DP
 
-原理图仅放置上述两颗连接器；各引脚以网络标签/引脚名标注，暂不画外设。
-引脚数据来自 db/pinout.db。
+原理图页面布局与 Core 官方引脚图一致（上 80DS、下 80DP），便于对照；
+各座子标网取自 **载板引脚表**（载板 DS←Core DP，载板 DP←Core DS，见 carrier-*.md）。
+引脚数据来自 db/pinout.db（role=carrier）。
 """
 
 from __future__ import annotations
@@ -22,37 +23,42 @@ OUT_DIR = ROOT / "docs" / "DF17" / "schematic"
 CONNECTORS = [
     {
         "designator": "J1",
-        "part_number": "DF17(1.0H)-80DP-0.5V(57)",
-        "name": "MATE_CORE_80DS",
-        "position": "+Y",
+        "part_number": "DF17(3.0)-80DS-0.5V(57)",
+        "name": "CORE_80DS_TOP",
+        "position": "-Y",
+        "carrier_pcb": "-Y",
         "core_ref": "80DS",
         "core_doc_position": "top",
-        "mates_core": "80DS",
-        "schematic_x": 80,
-        "schematic_y": 60,
-        "rotation": 180,
-        "mirror": False,
-    },
-    {
-        "designator": "J2",
-        "part_number": "DF17(3.0)-80DS-0.5V(57)",
-        "name": "MATE_CORE_80DP",
-        "position": "-Y",
-        "core_ref": "80DP",
-        "core_doc_position": "bottom",
         "mates_core": "80DP",
         "schematic_x": 80,
         "schematic_y": 420,
-        "rotation": 180,
-        "mirror": False,
+        "rotation": 90,
+        "mirror": True,
+    },
+    {
+        "designator": "J2",
+        "part_number": "DF17(1.0H)-80DP-0.5V(57)",
+        "name": "CORE_80DP_BOTTOM",
+        "position": "+Y",
+        "carrier_pcb": "+Y",
+        "core_ref": "80DP",
+        "core_doc_position": "bottom",
+        "mates_core": "80DS",
+        "schematic_x": 80,
+        "schematic_y": 60,
+        "rotation": 270,
+        "mirror": True,
     },
 ]
 
 VIEW_CONVENTION = (
-    "Core 资料为飞控 Bottom View：Pin1 左上、Pin80 左下（上排1→40，下排80→41）。"
-    "载板原理图目标：Pin1 右上、Pin80 右下（Core 左右镜像）。"
-    "立创 LCSC 原符号为奇偶分行，无法靠 rotation 同时满足；"
-    "使用工程库自定义符号 DF17-*-carrier-mirror（见 create_df17_carrier_mirror_symbols.py）。"
+    "Core 底视（上=80DS，下=80DP）：上排奇数 Pin1,3,…,79（左→右），下排偶数 Pin2,4,…,80（左→右）；"
+    "四角 Pin1 左上、Pin2 左下、Pin79 右上、Pin80 右下。"
+    "载板 PCB 为 Top View，相对 Core 底视左右 180° 镜像（载板 Pin1 在符号右上、Pin80 在左下）。"
+    "载板 DP 配 Core DS（PCB +Y），载板 DS 配 Core DP（PCB −Y）。"
+    "原理图页面与 Core 引脚图同序：上 J1=80DS、下 J2=80DP；"
+    "载板标网取自 carrier-80DS/80DP 引脚表（同 Pin 号对接 Core 对面座子）。"
+    "立创 LCSC 原符号为奇偶分行，使用工程库自定义符号 DF17-*-carrier-mirror。"
 )
 
 PAGE = {
@@ -68,7 +74,7 @@ def load_pins(conn: sqlite3.Connection, part_number: str) -> list[dict]:
         SELECT p.pin_number, p.signal_name, p.category, p.row, p.row_position
         FROM pins p
         JOIN connectors c ON c.id = p.connector_id
-        WHERE c.part_number = ?
+        WHERE c.part_number = ? AND c.role = 'carrier'
         ORDER BY p.pin_number
         """,
         (part_number,),
@@ -103,9 +109,13 @@ def build_spec() -> dict:
         "eda_steps": [
             "删除多余原理图页，仅保留一页并重命名为 Core_Carrier",
             "在工程库创建载板镜像符号（见 tools/create_df17_carrier_mirror_symbols.py）",
-            "放置 J1=80DP @ +Y、J2=80DS @ −Y，使用 carrier-mirror 符号，rotation=0",
-            "Pin1 位于连接器右上、Pin80 右下（与 Core 底视左右镜像一致）",
-            "NC 引脚加 No Connect；GND 引脚后续统一接 GND 符号（手动）",
+            "放置 J1=80DS（上）、J2=80DP（下），与 Core 官方引脚图同序；标网用 carrier-80DS/80DP 引脚表",
+            "LCSC 标准符号：J1(上 DS) rotation=90 mirror=true，J2(下 DP) rotation=270 mirror=true",
+            "（或 carrier-mirror 自定义符号：J1 rotation=0，J2 rotation=180）",
+            "Pin1 位于 J1 右上；J2 相对 J1 上下镜像（Pin1 左下）",
+            "PCB 贴装：+Y 仍为 80DP、−Y 仍为 80DS（与原理图上下顺序相反，属正常）",
+            "运行 tools/assign_core_carrier_nets.py --replace 标网（NC 默认跳过）",
+            "运行 tools/assign_nc_no_connect.py 删除 NC 导线；No Connect（×）若 MCP 未生效则 EDA 内手动",
             "PCB 导入 carrier-pcb.dxf 后替换 DXF 参考焊盘为官方封装",
         ],
         "mcp_api_sequence": [

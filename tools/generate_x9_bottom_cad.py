@@ -230,7 +230,7 @@ def build() -> None:
         dxfattribs={"layer": "TEXT"},
     ).set_placement((0, BOARD_HALF + 6), align=TextEntityAlignment.CENTER)
     msp.add_text(
-        "Pin1 约定：连接器左上=1，左下=80",
+        "Pin1 约定：Core 底视左上=1、左下=2、右上=79、右下=80（奇上偶下）",
         height=1.2,
         dxfattribs={"layer": "TEXT"},
     ).set_placement((0, BOARD_HALF + 4), align=TextEntityAlignment.CENTER)

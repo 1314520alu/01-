@@ -97,15 +97,15 @@ def conn_box(cy: float) -> tuple[float, float, float, float]:
 
 
 def add_df17_footprint(msp, spec: ConnectorSpec) -> None:
-    """载板 Top 视图：Pin1 在连接器左上，上行 1→40 沿 +X。"""
+    """载板 Top View（相对 Core 底视左右镜像）：Pin1 右上，Pin2 右下；奇上偶下。"""
     cy = spec.cy
-    x_left = -DF17_CONTACT_SPAN / 2
+    x_right = DF17_CONTACT_SPAN / 2
     row_y = [cy + DF17_ROW_PITCH / 2, cy - DF17_ROW_PITCH / 2]
 
-    for row_idx, py in enumerate(row_y):
-        for i in range(DF17_PINS_PER_ROW):
-            px = x_left + i * DF17_PITCH
-            msp.add_circle((px, py), DF17_PAD_R, dxfattribs={"layer": "PAD"})
+    for col in range(DF17_PINS_PER_ROW):
+        px = x_right - col * DF17_PITCH
+        msp.add_circle((px, row_y[0]), DF17_PAD_R, dxfattribs={"layer": "PAD"})
+        msp.add_circle((px, row_y[1]), DF17_PAD_R, dxfattribs={"layer": "PAD"})
 
     x1, y1, x2, y2 = conn_box(cy)
     msp.add_lwpolyline(
@@ -114,7 +114,7 @@ def add_df17_footprint(msp, spec: ConnectorSpec) -> None:
         dxfattribs={"layer": "FOOTPRINT"},
     )
 
-    pin1_x = x_left
+    pin1_x = x_right
     pin1_y = row_y[0]
     msp.add_circle((pin1_x, pin1_y), 0.4, dxfattribs={"layer": "PIN1"})
     msp.add_text("1", height=0.55, dxfattribs={"layer": "PIN1"}).set_placement(
@@ -178,7 +178,7 @@ def build() -> None:
         dxfattribs={"layer": "SILK_TOP"},
     ).set_placement((0, CARRIER_HALF - 3), align=TextEntityAlignment.CENTER)
     msp.add_text(
-        "Origin (0,0) = Core/Carrier center | Pin1 top-left per connector",
+        "Origin (0,0) = Core/Carrier center | Pin1 top-right per connector (mirror of Core)",
         height=0.9,
         dxfattribs={"layer": "TEXT"},
     ).set_placement((0, CARRIER_HALF - 5), align=TextEntityAlignment.CENTER)

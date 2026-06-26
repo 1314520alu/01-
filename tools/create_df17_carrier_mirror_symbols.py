@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """在工程库创建 DF17 载板镜像符号（Core 底视左右镜像布局）。
 
-目标布局（水平放置，Pin 朝上/下）::
+目标布局（水平放置，信号引脚朝上/下）::
 
-    40  39  ...  2   1     ← 上排 Pin1–40，Pin1 在右上
-    41  42  ...  79  80    ← 下排 Pin41–80，Pin80 在右下
+    79  77  ...  3   1     ← 上排奇数，Pin1 在右上（载板镜像 Core 左上）
+    80  78  ...  4   2     ← 下排偶数，Pin2 在右下（载板镜像 Core 左下）
 
-与 Core 资料一致：Core 底视左上=1、左下=80 → 载板原理图右上=1、右下=80。
+Core 底视：Pin1 左上、Pin2 左下、Pin79 右上、Pin80 右下。
+载板 Top View 左右 180° 镜像后：Pin1 右上、Pin2 右下、Pin79 左上、Pin80 左下。
 
-立创 LCSC 原符号为奇偶分行（下 1,3..79 / 上 2,4..80），无法靠 rotation 同时
-满足 Pin1@右上 与 Pin80@右下，需工程库自定义符号。
+立创 LCSC 原符号亦为奇偶分行，但默认 Pin1 方位与载板镜像目标不一致时需工程库自定义符号。
 
 用法：嘉立创 EDA Bridge 连接后，由 Agent 通过 MCP api_invoke 逐步执行本脚本
 输出的 JSON 步骤；或手动在符号编辑器按 PIN_LAYOUT 放置引脚。
@@ -57,13 +57,13 @@ ORIGIN_Y = 0
 
 
 def pin_layout() -> list[dict]:
-    """载板镜像引脚坐标：col 0 = 最右列（Pin1 / Pin80 侧）。"""
+    """载板镜像引脚坐标：col 0 = 最右列（Pin1 / Pin2 侧）。"""
     pins: list[dict] = []
     right_x = ORIGIN_X + (COLS - 1) * COL_PITCH
     for col in range(COLS):
         x = right_x - col * COL_PITCH
-        top_pin = col + 1
-        bottom_pin = 80 - col
+        top_pin = 2 * col + 1
+        bottom_pin = 2 * col + 2
         pins.append(
             {
                 "pinNumber": str(top_pin),
@@ -182,14 +182,14 @@ def build_mcp_steps() -> list[dict]:
                 "api": "eda.sch_PrimitiveComponent.create",
                 "args": [
                     {"libraryUuid": "${projectLibUuid}", "uuid": "${newDeviceUuid_80ds}"},
-                    120,
-                    320,
-                    None,
-                    0,
-                    False,
-                    True,
-                    True,
-                ],
+                120,
+                320,
+                None,
+                180,
+                False,
+                True,
+                True,
+            ],
                 "then_modify": {
                     "designator": "J2",
                     "name": "MATE_CORE_80DP",
@@ -210,7 +210,7 @@ def main() -> None:
             "复制符号后 openInEditor，在符号编辑器内用 sch_PrimitivePin.create 按 pinLayout 放置 82 个引脚",
             "sch_PrimitivePin.create(x, y, pinNumber, pinNumber, rotation, pinLength)",
             "画矩形外框连接两排引脚；Pin1 圆点标在右上角",
-            "rotation=0 mirror=false 放置，无需再旋转",
+            "J1 carrier-mirror：rotation=0 mirror=false；J2 carrier-mirror：rotation=180 mirror=false",
         ],
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
